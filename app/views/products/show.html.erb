@@ -1,0 +1,11 @@
+<h1>Product View</h1>
+
+<div>
+Product Name: <%= @product['name'] %> <br>
+Product Price: $<%= format_price(@product['price_in_cents'])%> <br>
+Product Category: <%= @product['primary_category']%> <br>
+Current Inventory: <%= @product['inventory_count']%> <br>
+<img src = <%= @product['image_thumb_url'] %>>
+</div>
+<p>
+<div><%= link_to "Back", "/products" %></div>

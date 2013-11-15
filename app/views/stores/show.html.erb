@@ -1,0 +1,41 @@
+
+
+<h2>Store Details</h2>
+<div>
+Store Name: <%= @store['name'] %> <br>
+Store Address: <%= @store['address_line_1'] %> <br>
+Store City: <%= @store['city'] %> <br>
+<%= @store['telephone'] %><br>
+</div>
+<h2>Store Hours</h2>
+
+
+    Sunday<br>
+    <%= convert_time(@store['sunday_open']) %>-<%= convert_time(@store['sunday_close']) %><br>
+  <br>
+
+    Monday<br>
+    <%= convert_time(@store['monday_open']) %>-<%= convert_time(@store['monday_close']) %><br>
+  <br>
+
+    Tuesday<br>
+    <%= convert_time(@store['tuesday_open']) %>-<%= convert_time(@store['tuesday_close']) %><br>
+  <br>
+
+    Wednesday<br>
+    <%= convert_time(@store['wednesday_open']) %>-<%= convert_time(@store['wednesday_close']) %></br>
+  <br>
+
+    Thursday<br>
+    <%= convert_time(@store['thursday_open']) %>-<%= convert_time(@store['thursday_close']) %><br>
+  <br>
+
+    Friday<br>
+    <%= convert_time(@store['friday_open']) %></td>-<%= convert_time(@store['friday_close']) %><br>
+  <br>
+    Saturday<br>
+    <%= convert_time(@store['saturday_open']) %>-<%= convert_time(@store['saturday_close']) %><br>
+  
+
+<p>
+<div><%= link_to "Back", "/stores" %></div>

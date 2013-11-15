@@ -1,0 +1,17 @@
+<h1>LCBO Stores List</h1>
+
+
+
+<% @stores['result'].each do |store| %>
+  
+    <%= link_to store['name'], store_path(store['id']) %><br>
+    <%= store['address_line_1'] %><br>
+    <%= store['city'] %><br>
+    <%= store['telephone'] %><br>
+    <br>
+  
+<% end %>
+
+
+<p>
+<div><%= link_to "Products List", "/products" %></div>

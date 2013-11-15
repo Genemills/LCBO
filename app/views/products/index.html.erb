@@ -1,0 +1,10 @@
+<h1>LCBO Products</h1>
+
+<% @products['result'].each do |product| %>
+  <section>
+    <p><%= link_to product['name'], product_path(product['id']) %></p>
+  </section>
+<% end %>
+
+<p>
+<div><%= link_to "Stores List", "/stores" %></div>
